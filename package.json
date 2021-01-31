@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Difference calculator - defines the difference between the two data structures",
+  "main": "gendiff.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gr8arty/frontend-project-lvl2.git"
+  },
+  "author": "Artyom Chuprin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gr8arty/frontend-project-lvl2/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/gr8arty/frontend-project-lvl2#readme",
+  "dependencies": {
+    "commander": "^7.0.0"
+  }
+}
