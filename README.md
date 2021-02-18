@@ -1,8 +1,7 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/gr8arty/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/gr8arty/frontend-project-lvl2/actions)
-
+[![Actions Status](https://github.com/gr8arty/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/gr8arty/frontend-project-lvl2/actions) 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e33d4ebc94e1ae19261d/maintainability)](https://codeclimate.com/github/gr8arty/frontend-project-lvl2/maintainability)
-
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e941519be69b44d056b0/test_coverage)](https://codeclimate.com/github/gr8arty/frontend-project-lvl2/test_coverage)
 
 Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Это популярная задача, для решения которой существует множество онлайн сервисов, например http://www.jsondiff.com/. Подобный механизм используется при выводе тестов или при автоматическом отслеживании изменении в конфигурационных файлах.
 
