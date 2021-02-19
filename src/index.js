@@ -22,6 +22,6 @@ export default (file1, file2) => {
     }
   });
 
-  const result = `{\n ${diffArray.join('\n ')}\n}`;
+  const result = `{\n  ${diffArray.join('\n  ')}\n}`;
   return result;
 };
