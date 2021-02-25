@@ -1,27 +1,22 @@
-import _ from 'lodash';
+import fs from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
+import parser from './parsers.js';
 
 export default (file1, file2) => {
-  const data1 = JSON.parse(file1);
-  const data2 = JSON.parse(file2);
+  const fileData1 = fs.readFileSync(file1, 'utf-8');
+  const fileData2 = fs.readFileSync(file2, 'utf-8');
 
-  const keys1 = _.keys(data1);
-  const keys2 = _.keys(data2);
-  const keys = _.union(keys1, keys2).sort();
+  const fileFormat1 = path.extname(file1);
+  const fileFormat2 = path.extname(file2);
 
-  const diffArray = [];
-  keys.forEach((key) => {
-    if (!_.has(data1, key)) {
-      diffArray.push(`+ ${key}: ${data2[key]}`);
-    } else if (!_.has(data2, key)) {
-      diffArray.push(`- ${key}: ${data1[key]}`);
-    } else if (data1[key] !== data2[key]) {
-      diffArray.push(`- ${key}: ${data1[key]}`);
-      diffArray.push(`+ ${key}: ${data2[key]}`);
-    } else {
-      diffArray.push(`  ${key}: ${data2[key]}`);
-    }
-  });
+  let parse;
 
-  const result = `{\n  ${diffArray.join('\n  ')}\n}`;
-  return result;
+  if (fileFormat1 === '.yaml' || fileFormat2 === '.yaml') {
+    parse = yaml.load;
+  } else if (fileFormat1 === '.json' || fileFormat2 === '.json') {
+    parse = JSON.parse;
+  }
+
+  return parser(parse(fileData1), parse(fileData2));
 };
