@@ -35,3 +35,9 @@ $ gendiff filepath1.json filepath2.json
 
 Asciicasts for ```gendiff filepath1.json filepath2.json```  \
 [Пример использования](https://asciinema.org/a/4Hp57Jo3Gz4TxKn3wwLNAUpaF)
+
+### Сравнение плоских файлов (Yaml)
+
+Asciicasts for ```gendiff filepath1.yaml filepath2.yaml```  \
+[Пример использования](https://asciinema.org/a/v7UAeuKAtWXnphPmPTkqgpHyZ)
+
