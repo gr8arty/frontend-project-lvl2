@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import program from 'commander';
-import fs from 'fs';
 import path from 'path';
 import genDiff from '../src/index.js';
 
@@ -26,9 +25,8 @@ program
       } finally {
         const path1 = path.resolve('.', filepath1);
         const path2 = path.resolve('.', filepath2);
-        const fileData1 = fs.readFileSync(path1, 'utf-8');
-        const fileData2 = fs.readFileSync(path2, 'utf-8');
-        const diff = genDiff(fileData1, fileData2);
+
+        const diff = genDiff(path1, path2);
         console.log(diff);
       }
     } catch (e) {
